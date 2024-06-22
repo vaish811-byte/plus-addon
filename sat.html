@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .container
+        {
+            display: flex;
+            margin-left: 500px;
+           
+        }h4{
+            margin-left:-450px;
+        }
+        #h1
+        {
+            margin-left: 350px;
+          width:200px;
+            
+        }
+        .upper
+        {
+            height: 250px;
+           
+           
+            padding:30px;
+          
+          
+        display: block;
+        margin-left: 300px;
+        width:700px;
+        block-size: auto;
+    background-color: azure;
+border-radius: 12px;
+}
+#idol
+{
+    margin-left:-400px;
+}
+.world
+{
+    align-items: center;
+    text-align: center;
+    height:50px;
+    margin-left:150px;
+    width:400px;
+    background-color: blanchedalmond;
+    color: black;
+    display: block;
+    border-radius: 12px;
+}
+select{
+    height:30px;
+    width:300px;
+    border-radius: 9px;
+}
+    </style>
+</head>
+<body>
+    <div class="upper">
+    <h1 class="world">World clock</h1>
+    <select onchange="one()" id="select">
+        <option id="one">My Current Location</option>
+        <option id="two">London</option>
+        <option id="three">New York</option>
+        <option id="four">Auckland</option>
+    </select>
+   
+    <div class="container">
+    <h1 id="idol">India</h1>
+    
+    <h1 id="h1"></h1>
+    </div>
+    
+    </div>
+    
+    <hr>
+    <a href="file:///C:/Users/Dell/.vscode/create%20module/add.html">All cities</a>
+    <h3>This project was coded with ❤️ by <span style="color:blue"> Vaishnavi Nigam </span> and is <a href=""> open sourced on GitHub</a></h3>
+    <script>
+       
+        function call(a,b)
+        {
+            let d=new Date();
+           let t=d.getTime()+(d.getTimezoneOffset()*60000);
+            let n=new Date(t+(b*3600000));
+            
+            return n.toLocaleString();
+        }
+        function one()
+        {
+            let str=document.getElementById('select').value;
+            let a=document.getElementById('one').value;
+            let b=document.getElementById('two').value;
+            let c=document.getElementById('three').value;
+            let d=document.getElementById('four').value;
+            if(str===a)
+            {
+                document.getElementById('h1').innerHTML=call(str,5.3);
+              document.getElementById('idol').innerHTML=str;
+
+        }
+        else if(str===b)
+        {
+            document.getElementById('h1').innerHTML=call(str,1);
+            
+            document.getElementById('idol').innerHTML=str;
+
+        } 
+        
+        else if(str===c)
+        {
+            document.getElementById('h1').innerHTML=call(str,-4);
+            document.getElementById('idol').innerHTML=str;
+        }
+        else{
+            document.getElementById('h1').innerHTML=call(str,12);
+            document.getElementById('idol').innerHTML=str;
+        }
+    }
+
+    </script>
+</body>
+</html>
