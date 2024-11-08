@@ -5,124 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+       .second{
+            height:200px;
+            width:1500px;
+            background-color: black;
+            background-image: url('weather.avif');
+            background-size: cover;
+        }
+        h1{
+                                                                                                           
             text-align: center;
-        }
-        .container
-        {
-            display: flex;
-            margin-left: 500px;
+            margin-bottom: 40px;
+            color:white;
            
-        }h4{
-            margin-left:-450px;
         }
-        #h1
+        .first
         {
-            margin-left: 350px;
-          width:200px;
+            height:700px;
+            width:800px;
+            background-color: blueviolet;
             
+            background-image: url('umbrella.jpg');
+            background-size: cover;
         }
-        .upper
+        .third
         {
-            height: 250px;
+           height:700px;
+           width:800px;
+           background-color: beige;
+           background-image: url('new.jpeg');
+           background-size: cover;
            
+        }
+        .get
+        {
+            height: 300px;
+            width:600px;
+            margin-top: 50px;
+            margin-left: 30px;
+            padding:5px;
            
-            padding:30px;
-          
-          
-        display: block;
-        margin-left: 300px;
-        width:700px;
-        block-size: auto;
-    background-color: azure;
-border-radius: 12px;
+            background-color: burlywood;
+            border-radius: 12px;
+        }
+
+        .d{
+            display: flex;
+
+        }
+        input{
+            text-align: center;
+            height: 50px;
+            width:450px;
+            margin-left: 30px;
+            margin-top: 30px;
+            border-radius: 12px;
+        }
+        button{
+            height:50px;
+            width:100px;
+            background-color: blue;
+            border-radius: 12px;
+            color:aliceblue;
+        }
+        .h2{
+            text-align: center;
+        }h3{
+            text-align: center;
+
+        }
+        h2{
+            margin-left: 10px;
+            color:rgb(7, 62, 70);
+        }
+        #sp
+        {
+            position:relative;
+    margin-top: 80px;
+    padding: 9px;
+    color:rgb(121, 22, 235); 
+        }
+#sec{
+    position:relative;
+    margin-top: 30px;
+    padding: 9px;
+    color:rgb(186, 22, 207);
 }
-#idol
+.ser
 {
-    margin-left:-400px;
+    background-color: bisque;
+    margin-top: 30px;
+    padding: 10px;
+    height:350px;
+    width:450px;
+    color:black;
+    border-radius: 50%;
 }
-.world
+#tim
 {
-    align-items: center;
+    color:blue;
+
+}
+.p
+{
+    margin-top: 10px;
+    height:150px;
+    width:1500px;
     text-align: center;
-    height:50px;
-    margin-left:150px;
-    width:400px;
-    background-color: blanchedalmond;
-    color: black;
-    display: block;
-    border-radius: 12px;
+    background-color: black;
+  
 }
-select{
-    height:30px;
-    width:300px;
-    border-radius: 9px;
+#ctry
+{
+    margin-left: 10px;
+}
+.txt{
+    padding:5px;
+   
+    color:white;
+
 }
     </style>
 </head>
 <body>
-    <div class="upper">
-    <h1 class="world">World clock</h1>
-    <select onchange="one()" id="select">
-        <option id="one">My Current Location</option>
-        <option id="two">London</option>
-        <option id="three">New York</option>
-        <option id="four">Auckland</option>
-    </select>
-   
-    <div class="container">
-    <h1 id="idol">India</h1>
-    
-    <h1 id="h1"></h1>
+    <div class="second"><h1>Weather Changes everyday</h1>
+    <h2 class="h2">Weather is metaphor for life ,sometimes it's good ,sometimes bad,but always changes</h2></div><div class="d"><div class="first" id="divs"><div class="ser"><h1 id="sp"</h1>
+<h1 id="sec"></h1>
+<h1 id="tim"></h1></div>
+
     </div>
-    
+    <div class="third"><input type="search" placeholder="enter a city" id="ipt">
+        <button >Search</button>
+        <div class="get">
+            <h2 id="desc" style="color: blueviolet;">DESCRIPTION   : </h2>
+        <h2 id="h2" style="color:bisque" >CITY  :</h2>
+      
+        <h2 id="h3" style="color:blue"> TEMPERATURE : </h2>
+        <h2 id="humid" style="color:darkmagenta">HUMIDITY :</h2>
+        <h2 id="lat">LATITUDE :</h2>
+        <h2 id="long" style="color:rgb(171, 43, 230)">LONGITUDE :</h2>
+     
     </div>
+    </div></div>
+    <div class="p">
+     <h3 class="txt">This project is coded by <span style="color: red">Vaishnavi Nigam</span> and is hosted on <a href="https://github.com/vaish811-byte/plus-addon/blob/main/sat.html">GitHub</a> and on <a href="<https://app.netlify.com/teams/vaish811-byte/sites/"> Netlify</a></p> 
+          <h2> Contact details:</h2>
+        <h3 style="color:beige">Email id: vaishnavinigam67@gmail.com</h3>
+    </div>
+
+  
     
-    <hr>
-    <a href="file:///C:/Users/Dell/.vscode/create%20module/add.html">All cities</a>
-    <h3>This project was coded with ❤️ by <span style="color:blue"> Vaishnavi Nigam </span> and is <a href=""> open sourced on GitHub</a></h3>
-    <script>
-       
-        function call(a,b)
-        {
-            let d=new Date();
-           let t=d.getTime()+(d.getTimezoneOffset()*60000);
-            let n=new Date(t+(b*3600000));
-            
-            return n.toLocaleString();
-        }
-        function one()
-        {
-            let str=document.getElementById('select').value;
-            let a=document.getElementById('one').value;
-            let b=document.getElementById('two').value;
-            let c=document.getElementById('three').value;
-            let d=document.getElementById('four').value;
-            if(str===a)
-            {
-                document.getElementById('h1').innerHTML=call(str,5.3);
-              document.getElementById('idol').innerHTML=str;
-
-        }
-        else if(str===b)
-        {
-            document.getElementById('h1').innerHTML=call(str,1);
-            
-            document.getElementById('idol').innerHTML=str;
-
-        } 
-        
-        else if(str===c)
-        {
-            document.getElementById('h1').innerHTML=call(str,-4);
-            document.getElementById('idol').innerHTML=str;
-        }
-        else{
-            document.getElementById('h1').innerHTML=call(str,12);
-            document.getElementById('idol').innerHTML=str;
-        }
-    }
-
-    </script>
+    <script src="first.js"></script>
 </body>
 </html>
