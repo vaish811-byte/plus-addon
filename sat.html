@@ -4,158 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-       .second{
-            height:200px;
-            width:1500px;
-            background-color: black;
+        .second {
+            height: 200px;
             background-image: url('weather.avif');
             background-size: cover;
         }
-        h1{
-                                                                                                           
-            text-align: center;
-            margin-bottom: 40px;
-            color:white;
-           
-        }
-        .first
-        {
-            height:700px;
-            width:800px;
-            background-color: blueviolet;
-            
+        .first {
             background-image: url('umbrella.jpg');
             background-size: cover;
         }
-        .third
-        {
-           height:700px;
-           width:800px;
-           background-color: beige;
-           background-image: url('new.jpeg');
-           background-size: cover;
-           
+        .third {
+            background-image: url('new.jpeg');
+            background-size: cover;
         }
-        .get
-        {
-            height: 300px;
-            width:600px;
-            margin-top: 50px;
-            margin-left: 30px;
-            padding:5px;
-           
-            background-color: burlywood;
-            border-radius: 12px;
-        }
-
-        .d{
-            display: flex;
-
-        }
-        input{
-            text-align: center;
-            height: 50px;
-            width:450px;
-            margin-left: 30px;
-            margin-top: 30px;
-            border-radius: 12px;
-        }
-        button{
-            height:50px;
-            width:100px;
-            background-color: blue;
-            border-radius: 12px;
-            color:aliceblue;
-        }
-        .h2{
-            text-align: center;
-        }h3{
-            text-align: center;
-
-        }
-        h2{
-            margin-left: 10px;
-            color:rgb(7, 62, 70);
-        }
-        #sp
-        {
-            position:relative;
-    margin-top: 80px;
-    padding: 9px;
-    color:rgb(121, 22, 235); 
-        }
-#sec{
-    position:relative;
-    margin-top: 30px;
-    padding: 9px;
-    color:rgb(186, 22, 207);
-}
-.ser
-{
-    background-color: bisque;
-    margin-top: 30px;
-    padding: 10px;
-    height:350px;
-    width:450px;
-    color:black;
-    border-radius: 50%;
-}
-#tim
-{
-    color:blue;
-
-}
-.p
-{
-    margin-top: 10px;
-    height:150px;
-    width:1500px;
-    text-align: center;
-    background-color: black;
-  
-}
-#ctry
-{
-    margin-left: 10px;
-}
-.txt{
-    padding:5px;
-   
-    color:white;
-
-}
     </style>
 </head>
-<body>
-    <div class="second"><h1>Weather Changes everyday</h1>
-    <h2 class="h2">Weather is a great metaphor for life — sometimes it's good, sometimes it's bad, and there's nothing much you can do about it but carry an umbrella or choose to dance in the rain!</h2></div><div class="d"><div class="first" id="divs"><div class="ser"><h1 id="sp"</h1>
-<h1 id="sec"></h1>
-<h1 id="tim"></h1></div>
-
+<body class="bg-gray-800 text-white font-sans">
+    <div class="second flex items-center justify-center">
+        <h1 class="text-center text-4xl mb-4 text-white">Weather Changes everyday</h1>
     </div>
-    <div class="third"><input type="search" placeholder="enter a city" id="ipt">
-        <button >Search</button>
-        <div class="get">
-            <h2 id="desc" style="color: blueviolet;">DESCRIPTION   : </h2>
-        <h2 id="h2" style="color:bisque" >CITY  :</h2>
-      
-        <h2 id="h3" style="color:blue"> TEMPERATURE : </h2>
-        <h2 id="humid" style="color:darkmagenta">HUMIDITY :</h2>
-        <h2 id="lat">LATITUDE :</h2>
-        <h2 id="long" style="color:rgb(171, 43, 230)">LONGITUDE :</h2>
-     
+    <h2 class="text-center text-xl mb-8 px-4">Weather is a great metaphor for life — sometimes it's good, sometimes it's bad, and there's nothing much you can do about it but carry an umbrella or choose to dance in the rain!</h2>
+    <div class="flex flex-wrap justify-center">
+        <div class="first h-64 w-full md:w-1/2 p-4 flex items-center justify-center bg-blue-600 bg-opacity-50">
+            <div class="ser bg-gray-200 p-4 rounded-full h-48 w-72 flex flex-col items-center justify-center">
+                <h1 id="sp" class="text-purple-700"></h1>
+                <h1 id="sec" class="text-pink-600"></h1>
+                <h1 id="tim" class="text-blue-500"></h1>
+            </div>
+        </div>
+        <div class="third h-64 w-full md:w-1/2 p-4 flex flex-col items-center justify-center bg-yellow-300 bg-opacity-50">
+            <input type="search" placeholder="Enter a city" id="ipt" class="text-center h-12 w-3/4 mb-4 rounded-lg">
+            <button class="h-12 w-24 bg-blue-700 rounded-lg text-white">Search</button>
+            <div class="get p-4 mt-4 bg-yellow-600 bg-opacity-75 rounded-lg w-full">
+                <h2 id="desc" class="text-purple-700">DESCRIPTION: </h2>
+                <h2 id="h2" class="text-yellow-400">CITY: </h2>
+                <h2 id="h3" class="text-blue-600">TEMPERATURE: </h2>
+                <h2 id="humid" class="text-purple-600">HUMIDITY: </h2>
+                <h2 id="lat" class="text-white">LATITUDE: </h2>
+                <h2 id="long" class="text-purple-700">LONGITUDE: </h2>
+            </div>
+        </div>
     </div>
-    </div></div>
-    <div class="p">
-     <h3 class="txt">This project is coded by <span style="color: red">Vaishnavi Nigam</span> and is open sourced  on <a href="https://github.com/vaish811-byte/plus-addon/blob/main/sat.html">GitHub</a> and   hosted on <a href="https://astonishing-peony-86e391.netlify.app/"> Netlify</a></p> 
-
-          <h2> Contact details:</h2>
-        <h3 style="color:beige">Email id: vaishnavinigam67@gmail.com</h3>
+    <div class="p mt-8 py-4 text-center bg-black">
+        <h3 class="txt text-white">This project is coded by <span class="text-red-500">Vaishnavi Nigam</span> and is open-sourced on <a href="https://github.com/vaish811-byte/plus-addon/blob/main/sat.html" class="text-blue-500">GitHub</a> and hosted on <a href="https://astonishing-peony-86e391.netlify.app/" class="text-blue-500">Netlify</a></h3>
+        <h2 class="mt-4 text-lg text-yellow-400">Contact details:</h2>
+        <h3 class="text-lg text-beige">Email id: vaishnavinigam67@gmail.com</h3>
     </div>
-
-  
-    
     <script src="first.js"></script>
 </body>
 </html>
